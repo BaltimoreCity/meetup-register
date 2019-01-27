@@ -1,0 +1,25 @@
+{
+  "name": "meetup-register",
+  "version": "1.0.0",
+  "description": "This repo is used to register a meetup from meetup.com and have it converted into a data format that is pushed into the baltimore tech portal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BaltimoreCity/meetup-register.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BaltimoreCity/meetup-register/issues"
+  },
+  "homepage": "https://github.com/BaltimoreCity/meetup-register#readme",
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "moment": "^2.24.0",
+    "write-yaml": "^1.0.0"
+  }
+}
