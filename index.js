@@ -6,8 +6,8 @@ const eventLinks = require("./links.json");
 
 const MEETUP_API_ROOT = "https://api.meetup.com";
 const GITHUB_API_ROOT = "https://api.github.com";
-const GITHUB_REPO = "no13000/testwrite2github";
-const GITHUB_TOKEN = "50769df28cdd83a7a062ae80d0e74b4603e97afb";
+const GITHUB_REPO = "";
+const GITHUB_TOKEN = "";
 
 // create/update data file in github repo
 async function createEventFileInRepo(path, data) {
@@ -30,7 +30,7 @@ async function createEventFileInRepo(path, data) {
     }
   })
     .then(data => console.log(`update ${data.content.name} success`))
-    .catch(err => err.message);
+    .catch(err => console.error(err.message));
 }
 
 // get file sha through github api [GET]
@@ -78,7 +78,7 @@ async function getEvent(link) {
 
     await request(MEETUP_API_ROOT + "/" + path)
       .then(success)
-      .catch(err => console.log(`meetup api error`));
+      .catch(err => console.log(err));
   }
 }
 

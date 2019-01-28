@@ -4,7 +4,7 @@
   "description": "This repo is used to register a meetup from meetup.com and have it converted into a data format that is pushed into the baltimore tech portal",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "exec": "node index.js"
   },
   "repository": {
     "type": "git",
