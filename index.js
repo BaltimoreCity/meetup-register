@@ -6,8 +6,8 @@ const dataUrls = require("./data/index.json");
 
 const MEETUP_API_ROOT = "https://api.meetup.com";
 const GITHUB_API_ROOT = "https://api.github.com";
-const GITHUB_REPO = "";
-const GITHUB_TOKEN = "";
+const GITHUB_REPO = process.env.GITHUB_REPO || "";
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || "";
 
 // create/update data file in github repo
 function createEventFileInRepo(path, data, sha = null) {

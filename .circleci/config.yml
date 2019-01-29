@@ -36,4 +36,4 @@ jobs:
       # tests
 
       # execute
-      - run: npm run exec
+      - run: GITHUB_REPO=$GITHUB_TARGET_REPO GITHUB_TOKEN=$GITHUB_TOKEN npm run exec
