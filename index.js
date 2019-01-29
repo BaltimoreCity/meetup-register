@@ -83,18 +83,18 @@ async function writeEventsFromUrls(urls) {
       const [shaRequestError, sha] = await getFileSha(path);
 
       if (shaRequestError) {
-        reportError(shaRequestError);
+        throw new Error(`Error in sha request: ${shaRequestError}`);
       }
 
       // create/update file
-      const [updateFileRequestError, response] = await createEventFileInRepo(
+      const [updateRequestError, response] = await createEventFileInRepo(
         path,
         event,
         sha
       );
 
-      if (updateFileRequestError) {
-        reportError(updateFileRequestError);
+      if (updateRequestError) {
+        throw new Error(`Error in update request: ${updateRequestError}`);
       }
 
       if (response) {
